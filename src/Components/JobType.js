@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Button, ButtonGroup } from 'bootstrap-4-react/lib/components';
 
 const JobType = ({ nextStep, handleChange, values }) => {
 	const [isOtherSelected, setIsOtherSelected] = useState(false);
@@ -28,25 +29,28 @@ const JobType = ({ nextStep, handleChange, values }) => {
 	};
 
 	return (
-		<div className='container'>
-			<h2 className='heading'>Select Job Type</h2>
+		<div>
+			<h2 centered>Select Job Type</h2>
 			{!isOtherSelected ? (
-				<div className='buttonContainer'>
-					<button className='button' onClick={() => handleSelect('Bathroom')}>
-						Bathroom
-					</button>
-					<button className='button' onClick={() => handleSelect('Kitchen')}>
-						Kitchen
-					</button>
-					<button className='button' onClick={() => handleSelect('Deck')}>
-						Deck
-					</button>
-					<button className='button' onClick={() => handleSelect('Basement')}>
-						Basement
-					</button>
-					<button className='button' onClick={() => handleSelect('other')}>
-						Other
-					</button>
+				<div class='d-flex justify-content-center'>
+					<ButtonGroup vertical aria-label='Vertical example'>
+						<Button secondary>Bathroom</Button>
+						<button className='button' onClick={() => handleSelect('Bathroom')}>
+							Bathroom
+						</button>
+						<button className='button' onClick={() => handleSelect('Kitchen')}>
+							Kitchen
+						</button>
+						<button className='button' onClick={() => handleSelect('Deck')}>
+							Deck
+						</button>
+						<button className='button' onClick={() => handleSelect('Basement')}>
+							Basement
+						</button>
+						<button className='button' onClick={() => handleSelect('other')}>
+							Other
+						</button>
+					</ButtonGroup>
 				</div>
 			) : (
 				<div className='inputContainer'>

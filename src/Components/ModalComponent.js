@@ -16,10 +16,10 @@ function ModalComponent({ isModalOpen, handleClose, handleOpen }) {
 					<Modal.Body>
 						<Funnel />
 					</Modal.Body>
-					<Modal.Footer>
+					{/* <Modal.Footer>
 						<Button secondary>Back</Button>
 						<Button primary>Next</Button>
-					</Modal.Footer>
+					</Modal.Footer> */}
 				</Modal.Content>
 			</Modal.Dialog>
 		</Modal>
